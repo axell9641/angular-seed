@@ -1,6 +1,7 @@
 .pokemon-panel {
   width: 80%;
   margin: 2rem auto;
+  text-align: center;
 }
 
 .pokemon-card {
@@ -14,6 +15,10 @@
   width: 80%;
   height: 80%;
   margin: 1rem 0;
+}
+
+:host ::ng-deep .mat-chip-list-wrapper {
+  justify-content: center;
 }
 
 @media (min-width: 40rem) {

@@ -7,9 +7,14 @@
 
     <img mat-card-image class="pokemon-card__image" [src]="pokemon.image" />
 
-    <ol>
-      <li *ngFor="let move of pokemon.moves">{{ move }}</li>
-    </ol>
+    <mat-chip-list>
+      <mat-chip
+        *ngFor="let move of pokemon.moves"
+        [removable]="true"
+        >{{ move }}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+    </mat-chip-list>
 
     <mat-card-actions class="pokemon-actions">
       <button
