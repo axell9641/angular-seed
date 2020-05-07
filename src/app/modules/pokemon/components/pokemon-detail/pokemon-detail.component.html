@@ -1,1 +1,24 @@
-<p>pokemon-detail works!</p>
+<div class="pokemon-panel">
+  <h3>Pokemon Details</h3>
+  <mat-card class="pokemon-card mat-elevation-z10">
+    <mat-card-header>
+      <mat-card-title>{{ pokemon.name | uppercase }}</mat-card-title>
+    </mat-card-header>
+
+    <img mat-card-image class="pokemon-card__image" [src]="pokemon.image" />
+
+    <ol>
+      <li *ngFor="let move of pokemon.moves">{{ move }}</li>
+    </ol>
+
+    <mat-card-actions class="pokemon-actions">
+      <button
+        mat-button
+        class="mat-raised-button mat-accent"
+        [routerLink]="['../']"
+      >
+        BACK
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -15,4 +15,6 @@ export class PokemonListComponent implements OnInit {
   ngOnInit(): void {
     this.pokemons$ = this.pokemonService.findAllPokemons();
   }
+
+  onViewPokemon() {}
 }

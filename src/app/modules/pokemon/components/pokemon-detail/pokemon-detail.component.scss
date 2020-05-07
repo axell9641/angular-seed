@@ -1,0 +1,27 @@
+.pokemon-panel {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-card__image {
+  padding: 0;
+  width: 80%;
+  height: 80%;
+  margin: 1rem 0;
+}
+
+@media (min-width: 40rem) {
+  .pokemon-panel {
+    width: 50%;
+  }
+  .pokemon-card__image {
+    width: 60%;
+    height: 60%;
+  }
+}

@@ -14,7 +14,7 @@ import { SharedModule } from './modules/shared/shared.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
-    SharedModule,  // SOLO TEMPORALMENTE PARA QUE FUNCIONE LUEGO QUITA NO SE DEBERÍA LLAMAR ACA
+    SharedModule,  // SOLO TEMPORALMENTE PARA QUE FUNCIONE LUEGO QUITA NO SE DEBERÍA LLAMAR ACA 
   ],
   providers: [],
   bootstrap: [AppComponent],
