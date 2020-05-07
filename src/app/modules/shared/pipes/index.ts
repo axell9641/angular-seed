@@ -2,4 +2,4 @@
 
 // export * from './order-by.pipe';
 
-export const Pipes = [];
+export const pipes = [];

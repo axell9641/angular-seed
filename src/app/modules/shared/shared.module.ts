@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import * as fromComponents from './components';
-import * as fromModulesMaterial from './dependencies/material';
+import * as fromMaterialModules from './dependencies/material';
 import * as fromDirectives from './directives';
 import * as fromPipes from './pipes';
 
@@ -11,18 +11,19 @@ import * as fromPipes from './pipes';
   declarations: [
     ...fromComponents.components,
     ...fromDirectives.directives,
-    ...fromPipes.Pipes,
+    ...fromPipes.pipes,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ...fromModulesMaterial.modules,
+    ...fromMaterialModules.modules,
   ],
   exports: [
     ...fromComponents.components,
     ...fromDirectives.directives,
-    ...fromPipes.Pipes,
+    ...fromPipes.pipes,
+    ...fromMaterialModules.modules,
   ],
 })
 export class SharedModule {}
