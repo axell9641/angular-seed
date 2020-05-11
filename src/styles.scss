@@ -1,2 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
-@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+// @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+@import "~@angular/material/theming";
+
+// Include non-theme styles for core.
+@include mat-core();
+
+$mat-custom-primary: (
+  50: #e0e0e0,
+  100: #b3b3b3,
+  200: #808080,
+  300: #4d4d4d,
+  400: #262626,
+  500: #000000,
+  600: #000000,
+  700: #000000,
+  800: #000000,
+  900: #000000,
+  A100: #a6a6a6,
+  A200: #8c8c8c,
+  A400: #737373,
+  A700: #666666,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  ),
+);
+
+$mat-custom-accent: (
+  50: #f6e5ee,
+  100: #e9bfd6,
+  200: #da94ba,
+  300: #cb699e,
+  400: #c0498a,
+  500: #b52975,
+  600: #ae246d,
+  700: #a51f62,
+  800: #9d1958,
+  900: #8d0f45,
+  A100: #ffbed7,
+  A200: #ff8bb8,
+  A400: #ff5899,
+  A700: #ff3f89,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  ),
+);
+
+// Define a theme.
+$primary: mat-palette($mat-custom-primary);
+$accent: mat-palette($mat-custom-accent); /* original :  A200, A100, A400 | belcorp: sin pasar argumentos tambien toma el 500 | belcorp: 500, 700, 400 */
+
+$theme: mat-light-theme($primary, $accent); /*tambien se puede cambiar por mat-dark-theme*/
+
+// Include all theme styles for the components.
+@include angular-material-theme($theme);
+
+/*
+Links:
+
+http://mcg.mbitson.com/#!?mcgpalette0=%23b52975
+https://medium.com/razroo/customize-angular-material-design-9df5c3524c3e
+https://material.angular.io/guide/theming-your-components
+*/
